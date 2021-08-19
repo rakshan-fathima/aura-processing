@@ -38,6 +38,17 @@ dataframes method is used to create clusters with respect to unique AID stored i
 In the dataprocessing method,we will be carrying out calculations to find the mean and standard deviation of the data. 
 Using mean and standard deviation we can find the boundary values for the time each appliance was used. 
 
+If the time difference is greater than or equal to 1800 seconds, we require those rows of data.
+```cluster = finaldf.slice(start, i + 1);``` 
+
+slice is a function in joinery dataframe that takes only the values of the rows that we have set. If the cluster has more than one row we carry onto finding mean,standard deviation and the boundaries of the range. Otherwise, we just need to calculate its mean. 
+
+Data that is not a part of main cluster can be taken to make calculations too. remains is a cluster that starts from the row of the last cluster that fit the range we provided, and goes on till the end of the dataframe.
+          
+
+
+
+
 
 
 
